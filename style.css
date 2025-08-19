@@ -784,3 +784,37 @@ footer {
   z-index: 2;
   border-radius: 0 0 3px 3px;
 }
+
+
+/* Общие правила для мобильных */
+@media (max-width: 768px) {
+
+  /* Делаем горизонтальный скролл для всех гридов */
+  .features-grid,
+  .courses-grid,
+  .teachers-grid {
+    display: flex;
+    flex-wrap: nowrap;              /* в одну линию */
+    overflow-x: auto;               /* горизонтальный скролл */
+    scroll-snap-type: x mandatory;  /* прилипаем к карточкам */
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 0 10px;
+  }
+
+  /* Сами карточки */
+  .feature,
+  .course-card,
+  .teacher-card {
+    flex: 0 0 80%;                  /* ширина карточки ~80% экрана */
+    max-width: 80%;
+    scroll-snap-align: center;      /* прилипаем по центру */
+  }
+
+  /* Чтобы скрыть полоску прокрутки (опционально) */
+  .features-grid::-webkit-scrollbar,
+  .courses-grid::-webkit-scrollbar,
+  .teachers-grid::-webkit-scrollbar {
+    display: none;
+  }
+}
