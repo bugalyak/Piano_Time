@@ -786,35 +786,71 @@ footer {
 }
 
 
-/* Общие правила для мобильных */
+/* 📱 Адаптация под телефоны — карусель карточек */
 @media (max-width: 768px) {
 
-  /* Делаем горизонтальный скролл для всех гридов */
+  /* Горизонтальная прокрутка */
   .features-grid,
+  .feature-list,
   .courses-grid,
   .teachers-grid {
     display: flex;
-    flex-wrap: nowrap;              /* в одну линию */
-    overflow-x: auto;               /* горизонтальный скролл */
-    scroll-snap-type: x mandatory;  /* прилипаем к карточкам */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     gap: 16px;
     padding: 0 10px;
   }
 
-  /* Сами карточки */
+  /* Карточки */
   .feature,
   .course-card,
   .teacher-card {
-    flex: 0 0 80%;                  /* ширина карточки ~80% экрана */
+    flex: 0 0 80%;
     max-width: 80%;
-    scroll-snap-align: center;      /* прилипаем по центру */
+    scroll-snap-align: center;
   }
 
-  /* Чтобы скрыть полоску прокрутки (опционально) */
+  /* Убираем полоску прокрутки */
   .features-grid::-webkit-scrollbar,
+  .feature-list::-webkit-scrollbar,
   .courses-grid::-webkit-scrollbar,
   .teachers-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Хэдер — делаем компактным */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .header .logo img {
+    height: 40px; /* поменьше логотип */
+  }
+
+  .header .school-name {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .header .nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 5px 0;
+  }
+
+  .header .nav a {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    white-space: nowrap;
+  }
+
+  .header .nav::-webkit-scrollbar {
     display: none;
   }
 }
