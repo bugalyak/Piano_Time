@@ -4,6 +4,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #000;
     color: #fff;
+    padding-top: 70px;
 }
 
 /* Хэдер */
@@ -16,7 +17,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.4);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     z-index: 1000;
@@ -89,7 +90,6 @@ body {
     padding-left: 10%;
     background: url('img/hero.jpg') center/cover no-repeat;
     overflow: hidden;
-    padding-top: 90px; /* чтобы хэдер не перекрывал текст */
 }
 
 /* Картинка Hero с размытой частью */
