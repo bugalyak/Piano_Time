@@ -90,7 +90,6 @@ body {
     padding-left: 10%;
     background: url('img/hero.jpg') center/cover no-repeat;
     overflow: hidden;
-    padding-top: 90px; /* чтобы хэдер не перекрывал текст */
 }
 
 /* Картинка Hero с размытой частью */
